@@ -13,11 +13,39 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-          ContentNavigation()
+          ContentToolbar()
         }
         .padding()
     }
 }
+
+// View Toolbar
+struct ContentToolbar: View {
+    
+    @State private var show = false
+    
+    var body: some View {
+        NavigationView{
+            VStack {
+                Button("Open modal"){
+                    show.toggle()
+                }.sheet(isPresented: $show) {
+                    ViewModal()
+                }.navigationTitle("Navigation")
+                    .toolbar{
+                        NavigationLink(destination: SecondView()){
+                            Image(systemName: "plus")
+                        }
+                        NavigationLink(destination: ThirdView()){
+                            Image(systemName: "camera")
+                        }
+                    }
+            }
+            .padding()
+        }
+    }
+}
+
 
 // View Navigation
 struct ContentNavigation: View {
