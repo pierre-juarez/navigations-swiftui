@@ -12,6 +12,8 @@
 		5595E5A729D7743B00E38692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5595E5A629D7743B00E38692 /* Assets.xcassets */; };
 		5595E5AA29D7743B00E38692 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5595E5A929D7743B00E38692 /* Preview Assets.xcassets */; };
 		5595E5B129D7751200E38692 /* ViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595E5B029D7751200E38692 /* ViewModal.swift */; };
+		5595E5B329D7802500E38692 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595E5B229D7802500E38692 /* SecondView.swift */; };
+		5595E5B529D7815100E38692 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595E5B429D7815100E38692 /* ThirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		5595E5A629D7743B00E38692 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5595E5A929D7743B00E38692 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5595E5B029D7751200E38692 /* ViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModal.swift; sourceTree = "<group>"; };
+		5595E5B229D7802500E38692 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		5595E5B429D7815100E38692 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				5595E5A629D7743B00E38692 /* Assets.xcassets */,
 				5595E5A829D7743B00E38692 /* Preview Content */,
 				5595E5B029D7751200E38692 /* ViewModal.swift */,
+				5595E5B229D7802500E38692 /* SecondView.swift */,
+				5595E5B429D7815100E38692 /* ThirdView.swift */,
 			);
 			path = NavigationSwiftUI;
 			sourceTree = "<group>";
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5595E5B129D7751200E38692 /* ViewModal.swift in Sources */,
+				5595E5B529D7815100E38692 /* ThirdView.swift in Sources */,
 				5595E5A529D7743A00E38692 /* ContentView.swift in Sources */,
+				5595E5B329D7802500E38692 /* SecondView.swift in Sources */,
 				5595E5A329D7743A00E38692 /* NavigationSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
