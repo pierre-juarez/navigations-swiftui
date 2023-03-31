@@ -23,21 +23,24 @@ struct ContentView: View {
 struct ContentToolbar: View {
     
     @State private var show = false
-    
+    @State private var text = ""
     var body: some View {
         NavigationView{
             VStack {
+                TextField("Ingresa un texto", text: $text)
                 Button("Open modal"){
                     show.toggle()
                 }.sheet(isPresented: $show) {
-                    ViewModal()
+                    ViewModal(textTitle: text)
                 }.navigationTitle("Navigation")
                     .toolbar{
-                        NavigationLink(destination: SecondView()){
-                            Image(systemName: "plus")
-                        }
-                        NavigationLink(destination: ThirdView()){
-                            Image(systemName: "camera")
+                        HStack{
+                            NavigationLink(destination: SecondView(title: text)){
+                                Image(systemName: "plus")
+                            }
+                            NavigationLink(destination: ThirdView()){
+                                Image(systemName: "camera")
+                            }
                         }
                     }
             }
@@ -55,13 +58,13 @@ struct ContentNavigation: View {
     var body: some View {
         NavigationView{
             VStack {
-                NavigationLink(destination: SecondView()){
+                NavigationLink(destination: SecondView(title:"Second view...")){
                     Text("Second view!!!")
                 }
                 Button("Open modal"){
                     show.toggle()
                 }.sheet(isPresented: $show) {
-                    ViewModal()
+                    ViewModal(textTitle: "")
                 }.navigationTitle("Navigation")
             }
             .padding()
@@ -79,7 +82,7 @@ struct ContentModal: View {
             Button("Open modal"){
                 show.toggle()
             }.sheet(isPresented: $show) {
-                ViewModal()
+                ViewModal(textTitle: "")
             }
         }
         .padding()

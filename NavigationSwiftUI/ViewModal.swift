@@ -10,12 +10,12 @@ import SwiftUI
 struct ViewModal: View {
     
     @Environment (\.presentationMode) var back
-    
+    var textTitle: String
     var body: some View {
         ZStack{
             Color.orange.ignoresSafeArea(.all)
             VStack{
-                Text("View Modal")
+                Text(textTitle)
                     .bold()
                     .font(.title)
                     .foregroundColor(.white)
@@ -29,6 +29,6 @@ struct ViewModal: View {
 
 struct ViewModal_Previews: PreviewProvider {
     static var previews: some View {
-        ViewModal()
+        ViewModal(textTitle: "")
     }
 }
